@@ -16,7 +16,7 @@ const props = defineProps<HeaderProps>()
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn v-for="link in props.links" :key="link.text">
-        {{ link.text }}
+        <NuxtLink :to="link.to">{{ link.text }}</NuxtLink>
       </v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
@@ -27,3 +27,10 @@ const props = defineProps<HeaderProps>()
     </slot>
   </v-app-bar>
 </template>
+<style scoped>
+a {
+  color: inherit;
+  text-decoration: none;
+}
+</style>
+

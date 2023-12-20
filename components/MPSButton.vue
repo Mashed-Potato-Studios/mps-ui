@@ -11,13 +11,13 @@ const props = defineProps<MPSButtonProps>()
 </script>
 <template>
   <v-btn>
-<!--    <slot name="leading" :disabled="props.disabled">-->
-<!--      <v-icon v-if="props.isLeading && props.iconLeading"></v-icon>-->
-<!--    </slot>-->
     <slot>
       <span v-if="props.text" :class="[props.truncate ? 'text-left break-all' : '']">
         {{ props.text }}
       </span>
+    </slot>
+    <slot name="icon">
+      <v-icon v-if="props.iconLeading" :left="props.isLeading">{{ props.iconLeading }}</v-icon>
     </slot>
   </v-btn>
 </template>

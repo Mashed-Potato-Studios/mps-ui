@@ -5,11 +5,26 @@
  *
  */
 
+export type MPSCardProps = {
+  title: string;
+  subtitle: string;
+  loading: boolean;
+  maxWidth: number;
+  minWidth: number;
+  maxHeight: number;
+  minHeight: number;
+  elevation: number;
+  activeClass: boolean;
+  color: string;
+  isActive: boolean;
 
+}
 
+const props = defineProps<MPSCardProps>()
 </script>
 <template>
   <v-card>
+    <slot name="loader"/>
     <v-card-item>
       <v-card-title>
         <span class="headline">{{ title }}</span>

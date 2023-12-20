@@ -18,7 +18,7 @@ const asideLinks = [
     <!--    <v-app-bar :elevation="2"></v-app-bar>-->
     <MPSHeader headerTitle="MPS UI Layer" :links="asideLinks"/>
     <v-main>
-      <v-breadcrumbs bg-color="green" :items="['Documentation', 'Components', 'MPSMain']"></v-breadcrumbs>
+      <MPSBreadCrumbs />
       <v-container fluid>
         <v-row>
           <!-- Aside Feature 1 -->
